@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    /* border: 1px solid red;   */
+}
+:root {
+    --bg-body: #ff;
+    --color-text: #000;
+    --color-hf:#6bc1f3;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-body);
+    color: var(--color-text);
+}
+
+/*HEADER CSS */
+
+header, footer {
+    background-color:  var(--color-hf);  
+}
+
+header,  footer {
+    height: 4pc;
+}
+
+
+footer{
+    margin-top: 4pc;
+}
+header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   padding-left: 2pc;
+   padding-right: 2pc;
+
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+#menu{
+    width: 20pc;
+}
+#menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+#menu ul li {
+    display: flex;
+    gap: 2pc;
+    cursor: pointer;
+}
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+.bgcolor{
+    background-color: var(--color-hf);;
+}
+
+
+#offcanvasNavbarLabel {
+    color: white !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+#izquierdaHeader {
+    display: flex;
+    align-items: center;
+   
+}
+
+#izquierdaHeader h4 {
+    /* color: var(--secondary-color); */
+    font-weight: 500;
+}
+#drop{
+    display: none;
+}
+
+#title{
+    padding: 5pc 0 5pc 0;
+    height: 90hv;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title h1{
+    font-size: 90px;
+
+}
+
+#title h4{
+    font-size: 20px;
+    color: rgb(133, 133, 133);
+    
+}
+
+.pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#team{
+  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 5pc
+}
+
+/* css solo de las cartas, info sacada de la api */
+
+.card{
+    color: white;
+    /* height: 14pc; */
+    background-color: #727070 !important;
+    margin: 0.5pc;
+    display: flex;
+    padding: 1pc 3pc;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 60%;
+}
+.image{
+    height: 10pc;
+    width: 10pc;
+    border-radius: 50%;
+    margin-bottom: 3pc;
+    margin-top:1pc;
+}
+.name{
+    font-size: 1.5pc;
+    align-items: center;
+}
+.cards_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio{
+    width: 80%;
+    text-align: justify;
+}
+
+.nombre_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1070px ) {
+.card{
+    flex-direction: column;
+    padding: 1pc 1pc;
+    width: 90%;
+}
+
+#drop{
+    display: block;
+}
+
+header{
+    display: none;
+}
+
+#title h1{
+    font-size: 45px;
+
+}
+
+}
