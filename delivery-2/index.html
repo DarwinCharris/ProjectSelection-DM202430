@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="default-atributes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fuenteGlobal">
+    <header class="Header-Footer-background headerDimension">
+        <h1 class="centerText">Delivery 2</h1>
+        <a class="centerText a-Margin" href="../index.html">Home</a>
+    </header>
+    <main class="BodyContent">
+        <section class="titulos"><h2>Data Overview</h2></section>
+        <section class="titulos sectionSeparation"><h2>Exogenous Repository</h2></section>
+        <section class="titulos sectionSeparation"><h2>Data Visualization</h2></section>
+        <section class="sectionSeparation">
+            <h2 class="titulos">Data Cleaning</h2>
+            <p class="subtitleSeparation">Before performing a data analysis, it is essential to ensure that the data is accurate and complete. A process known as 'data cleaning' removes errors or missing values that may bias the results. Below are the results of the data cleaning process performed on our dataset.</p>
+            <ol class="contentSeparation margenIzqFirstLevel">
+                <li>
+                    <h3 class="subtitulos subtitleSeparation">Identification of Missing Values</h3>
+                    <p>First, we identified the columns that contained missing values. These columns are important for our analysis, as the lack of information in these areas could affect the results.</p>
+                    <strong>Table of missing values (before cleaning):</strong>
+                    <table border="1" class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Atribute</th>
+                                <th>Nro null values</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Payment_Difficulty</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Contract_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Own_Car</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Own_Realty</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Number_of_Children</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Total_Income</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Credit_Amount</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Annuity</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Goods_Price</td>
+                                <td>278</td>
+                            </tr>
+                            <tr>
+                                <td>Income_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Education_Level</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Family_Status</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Housing_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Age_in_Days</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Days_Employed</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Organization_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>AGE_YEARS</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>It was detected that the attributes Annuity and Goods_Price had 12 and 278 missing values, respectively.</p>
+
+                    <h4>Action Taken</h4>
+                    <p>We opted to remove the rows containing missing values in the 'Annuity' and 'Goods_Price' columns. This decision was made because the missing values represented a small proportion of the total data, and it was not possible to estimate these values accurately without introducing bias.</p>
+                    
+                    <strong>Table of missing values (after cleaning)</strong>
+                    
+                    <table border="1" class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Atribute</th>
+                                <th>Nro null values</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Payment_Difficulty</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Contract_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Own_Car</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Own_Realty</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Number_of_Children</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Total_Income</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Credit_Amount</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Annuity</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Goods_Price</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Income_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Education_Level</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Family_Status</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Housing_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Age_in_Days</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Days_Employed</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Organization_Type</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>AGE_YEARS</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <h3 class="subtitulos subtitleSeparation">Handling Outliers</h3>
+                    <p>The following is a statistical summary of the most relevant columns. Here, you can see the amount of data, average values, standard deviation, as well as the minimum, maximum, and percentile values.</p>
+                    <strong>Statistical Summary Table:</strong>
+
+                    <div class="table-container">
+                        <table class="styled-table responsive-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Payment_Difficulty</th>
+                                    <th>Number_of_Children</th>
+                                    <th>Total_Income</th>
+                                    <th>Credit_Amount</th>
+                                    <th>Annuity</th>
+                                    <th>Goods_Price</th>
+                                    <th>Age_in_Days</th>
+                                    <th>Days_Employed</th>
+                                    <th>AGE_YEARS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>count</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                    <td>307221.000</td>
+                                </tr>
+                                <tr>
+                                    <td>mean</td>
+                                    <td>0.0807</td>
+                                    <td>0.417</td>
+                                    <td>168832.60</td>
+                                    <td>599316.30</td>
+                                    <td>27120.45</td>
+                                    <td>538397.30</td>
+                                    <td>-16038.79</td>
+                                    <td>63851.10</td>
+                                    <td>43.94</td>
+                                </tr>
+                                <tr>
+                                    <td>std</td>
+                                    <td>0.2724</td>
+                                    <td>0.722</td>
+                                    <td>237219.90</td>
+                                    <td>402519.60</td>
+                                    <td>14492.11</td>
+                                    <td>369448.40</td>
+                                    <td>4363.85</td>
+                                    <td>141305.92</td>
+                                    <td>11.96</td>
+                                </tr>
+                                <tr>
+                                    <td>min</td>
+                                    <td>0.0000</td>
+                                    <td>0.000</td>
+                                    <td>25650.00</td>
+                                    <td>45000.00</td>
+                                    <td>1615.50</td>
+                                    <td>40500.00</td>
+                                    <td>-25229.00</td>
+                                    <td>-17912.00</td>
+                                    <td>20.52</td>
+                                </tr>
+                                <tr>
+                                    <td>25%</td>
+                                    <td>0.0000</td>
+                                    <td>0.000</td>
+                                    <td>112500.00</td>
+                                    <td>270000.00</td>
+                                    <td>16551.00</td>
+                                    <td>238500.00</td>
+                                    <td>-19684.00</td>
+                                    <td>-2760.00</td>
+                                    <td>34.01</td>
+                                </tr>
+                                <tr>
+                                    <td>50%</td>
+                                    <td>0.0000</td>
+                                    <td>0.000</td>
+                                    <td>148500.00</td>
+                                    <td>514602.00</td>
+                                    <td>24916.50</td>
+                                    <td>450000.00</td>
+                                    <td>-15753.00</td>
+                                    <td>-1213.00</td>
+                                    <td>43.16</td>
+                                </tr>
+                                <tr>
+                                    <td>75%</td>
+                                    <td>0.0000</td>
+                                    <td>1.000</td>
+                                    <td>202500.00</td>
+                                    <td>808650.00</td>
+                                    <td>34596.00</td>
+                                    <td>679500.00</td>
+                                    <td>-12415.00</td>
+                                    <td>-289.00</td>
+                                    <td>53.93</td>
+                                </tr>
+                                <tr>
+                                    <td>max</td>
+                                    <td>1.0000</td>
+                                    <td>19.000</td>
+                                    <td>117000000.00</td>
+                                    <td>4050000.00</td>
+                                    <td>258025.50</td>
+                                    <td>4050000.00</td>
+                                    <td>-7489.00</td>
+                                    <td>365243.00</td>
+                                    <td>69.12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4>Analysis of Negative Values in "Age_in_Days"</h4>
+                    <p>We detected that all values in the 'Age_in_Days' column are negative.
+                        <div class="image-container">
+                            <img src="../img/Age_in_Days_distribution.png" alt="Distribution of the 'Days_Employed' attribute">
+                        </div>
+                        <pre>
+                            <code>
+                                Negative values: 307221
+                                Percentage of negative values: 100.00%
+                            </code>
+                        </pre>
+                        
+                        This is not an error; the dataset stores age as the number of days from birth to the application date, measured from the present backward. These values simply reflect how age was calculated in the dataset.</p>
+                    
+                    <h4>Analysis of Negative Values in "Days_Employed"</h4>
+                    <p>Similarly to Age_in_Days, negative values in this context indicate the time the person has been employed before the application. For example: If a value is -1000, it means that the person has been working in their current job for 1000 days (approximately 2.7 years) before applying for credit.</p>
+                    
+                    <div class="image-container">
+                        <img src="../img/Days_Employed_distribution.png" alt="Distribucion del atributo 'Days_Emplyed'">
+                    </div>
+                    <pre>
+                        <code>
+                            Negative values: 251867
+                            Percentage of negative values: 81.98%
+                        </code>
+                    </pre>
+                    Not all values of Days_Employed are negative, indicating that there are two types of people in these data: those who have been unemployed and those who have been employed.
+                    
+                    <h4>Analysis of Positive Values in Days_Employed</h4>
+                    <div class="image-container">
+                        <img src="../img/Days_Employed_distribution_complete.png" alt="Distribution of the 'Days_Employed' attribute">
+                    </div>
+                    <p>In the analysis of the Days_Employed data, a significant extreme value was detected: 365243. This value stands out remarkably from the others, suggesting that it may represent an anomaly in the data; however, this is not the case.<br><br>
+                    
+                    In this context, the value of 365243 indicates a special status in the record, rather than an error in the data. Specifically, this value represents the "unemployed" or "unknown" category.</p>
+                </li>
+
+
+                <li>
+                    <h3 class="subtitulos subtitleSeparation">Handling Inconsistencies</h3>
+                    <p>During the data cleaning process, one key aspect is identifying and correcting any inconsistencies in categorical data. Below is a summary of how the different data categories were reviewed and validated:</p>
+                    <ul class="margenIzqSecondLevel">
+                        <li>
+                            <h4>Contract Type</h4>
+                            <pre>
+                                <code>
+                                    ['Cash loans' 'Revolving loans']
+                                </code>
+                            </pre>
+                            <p>Two main types of contracts were identified in the data, ensuring no unexpected additional categories.</p>
+                        </li>
+
+                        <li>
+                            <h4>Gender</h4>
+                            <pre>
+                                <code>
+                                    ['M' 'F' 'XNA']
+                                </code>
+                            </pre>
+                            <p>The data includes three gender categories. No errors or inconsistent categories were found.</p>
+                        </li>
+
+                        <li>
+                            <h4>Vehicle Ownership</h4>
+                            <pre>
+                                <code>
+                                    ['N' 'Y']
+                                </code>
+                            </pre>
+                            <p>The data shows whether people own a vehicle or not, with clear and consistent categories.</p>
+                        </li>
+
+                        <li>
+                            <h4>Real Estate Ownership</h4>
+                            <pre>
+                                <code>
+                                    ['Y' 'N']
+                                </code>
+                            </pre>
+                            <p>The categories indicate whether a person owns real estate. No erroneous values were detected.</p>
+                        </li>
+
+                        <li>
+                            <h4>Income Type</h4>
+                            <pre class="codeIzqMargin">
+                                <code>
+                                    ['Working' 'State servant' 'Commercial associate' 'Pensioner' 'Unemployed'
+                                    'Student' 'Businessman' 'Maternity leave']
+                                </code>
+                            </pre>
+                            <p>The income type categories are well-defined and appropriately reflect different income sources.</p>
+                        </li>
+
+                        <li>
+                            <h4>Educational Level</h4>
+                            <pre class="codeIzqMargin">
+                                <code>
+                                    ['Secondary / secondary special' 'Higher education' 'Incomplete higher'
+                                    'Lower secondary' 'Academic degree']
+                                </code>
+                            </pre>
+                            <p>Educational levels are clearly categorized, with all relevant categories represented.</p>
+                        </li>
+                        
+                        <li>
+                            <h4>Marital Status</h4>
+                            <pre class="codeIzqMargin">
+                                <code>
+                                    ['Single / not married' 'Married' 'Civil marriage' 'Widow' 'Separated']
+                                </code>
+                            </pre>
+                            <p>Marital status is classified into categories that cover the main family situations without inconsistencies.</p>
+                        </li>
+
+                        <li>
+                            <h4>Housing Type</h4>
+                            <pre class="codeIzqMargin">
+                                <code>
+                                    ['House / apartment' 'Rented apartment' 'With parents'
+                                    'Municipal apartment' 'Office apartment' 'Co-op apartment']
+                                </code>
+                            </pre>
+                            <p>Housing type categories are varied and clearly defined, with no incorrect values.</p>
+                        </li>
+
+                        <li>
+                            <h4>Organization Type</h4>
+                            <pre class="codeIzqMargin"> 
+                                <code>
+                                    ['Business Entity Type 3' 'School' 'Government' 'Religion' 'Other' 'XNA'
+                                    'Electricity' 'Medicine' 'Business Entity Type 2' 'Self-employed'
+                                    'Transport: type 2' 'Construction' 'Housing' 'Kindergarten'
+                                    'Trade: type 7' 'Industry: type 11' 'Military' 'Services'
+                                    'Security Ministries' 'Transport: type 4' 'Industry: type 1' 'Emergency'
+                                    'Security' 'Trade: type 2' 'University' 'Transport: type 3' 'Police'
+                                    'Business Entity Type 1' 'Postal' 'Industry: type 4' 'Agriculture'
+                                    'Restaurant' 'Culture' 'Hotel' 'Industry: type 7' 'Trade: type 3'
+                                    'Industry: type 3' 'Bank' 'Industry: type 9' 'Insurance' 'Trade: type 6'
+                                    'Industry: type 2' 'Transport: type 1' 'Industry: type 12' 'Mobile'
+                                    'Trade: type 1' 'Industry: type 5' 'Industry: type 10' 'Legal Services'
+                                    'Advertising' 'Trade: type 5' 'Cleaning' 'Industry: type 13'
+                                    'Trade: type 4' 'Telecom' 'Industry: type 8' 'Realtor' 'Industry: type 6']
+                                </code>
+                            </pre>
+                            <p>Multiple types of organizations were identified, covering a wide range of sectors. The categories are broad and show no inconsistencies.</p>
+                        </li>
+                    </ul>
+                </li>
+
+            </ol>
+        </section>
+        <section class="titulos sectionSeparation"><h2>Data Imputation</h2></section>
+    </main>
+    <footer class="FooterDimension Header-Footer-background"></footer>
+</body>
+</html>
