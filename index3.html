@@ -4,17 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delivery 2</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style3.css">
 </head>
 <body class="fuenteGlobal">
-    <header class="Header-Footer-background headerDimension">
-        <h1 class="centerText">Delivery 2</h1>
-        <a class="centerText a-Margin" href="../index.html">Home</a>
+    <header>
+        <nav>
+            <div id="izquierdaHeader">
+                <h4 id="title">Loan Defaulter</h4>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html" id="btn-home">Home</a></li>
+                    <li><a href="index2.html" id="btn-team">Team</a></li>
+                    <li><a href="index3.html" id="btn-view">Visualization</a></li> 
+                    <li><a href="index4.html" id="btn-info">Info</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+    <div id="drop">
+        <nav class="navbar  fixed-top bgcolor">
+          <div class="container-fluid custom-nav" id="offcanvasNavbarLabel">
+            <a class="navbar-brand custom-nav" id="offcanvasNavbarLabel" href="#">Loan Defaulter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+    
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Loan Defaulter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index2.html">Team</a>
+                  </li>
+    
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="index3.html">Visualization</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index4.html">info</a>
+                  </li>
+                </ul>
+    
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
     <main class="BodyContent">
-        <section class="titulos"><h2>Data Overview</h2></section>
-        <section class="titulos sectionSeparation"><h2>Exogenous Repository</h2></section>
-        <section class="titulos sectionSeparation"><h2>Data Visualization</h2></section>
+        <section ><h2 class="titulos">Data Overview</h2>
+            <ol class="contentSeparation margenIzqFirstLevel">
+                <p>In the Loan Defaulter dataset, we identified a set of variables, which we consider to be relevant in predicting whether a client may have payment difficulties when making a loan. These variables are:
+                    <ul>
+                        <li>TARGET</li>
+                        <li>NAME_CONTRACT_TYPE</li>
+                        <li>CODE_GENDER</li>
+                        <li>FLAG_OWN_CAR</li>
+                        <li>FLAG_OWN_REALTY</li>
+                        <li>CNT_CHILDREN</li>
+                        <li>AMT_INCOME_TOTAL</li>
+                        <li>AMT_CREDIT</li>
+                        <li>AMT_ANNUITY</li>
+                        <li>AMT_GOODS_PRICE</li>
+                        <li>NAME_INCOME_TYPE</li>
+                        <li>NAME_EDUCATION_TYPE</li>
+                        <li>NAME_FAMILY_STATUS</li>
+                        <li>NAME_HOUSING_TYPE</li>
+                        <li>DAYS_BIRTH</li>
+                        <li>DAYS_EMPLOYED</li>
+                        <li>ORGANIZATION_TYPE</li>
+                    </ul>
+                </p> 
+                <p>
+                    In the data there were variables that may be somewhat redundant with those selected, as well as categorical variables that had only one option and secondary variables that are not directly related to the context of the problem. All of these were eliminated.
+                    (For more information on the variables, see the info section).
+                </p>  
+            </ol>         
+        </section>
+        <section class="sectionSeparation"><h2 class="titulos">Exogenous Repository</h2>
+        <ol class="contentSeparation margenIzqFirstLevel">
+            <h3 class="subtitulos"> Macroeconomic Data</h3>
+            <p>
+                External factors play a decisive role in whether a borrower meets his or her financial obligations. You can enhance your analysis by combining data from external databases that reflect the economic environment in which your lender operates. Some of the relevant sources are listed below.
+            </p>
+            <ul>
+                <li>Interest Rates: Data on regional and global interest rate movements provide valuable context on how loans are repaid over time. Rising interest rates increase borrowing costs and make repayments more difficult.</li>
+                <li>Unemployment Rate: The unemployment rate is an important indicator of a borrower's job stability. High unemployment increases the risk of bankruptcy as many people struggle to earn a steady income.</li>
+                <li>Consumer Price Index (CPI): Inflation directly affects borrowers' purchasing power. Aggregate inflation data helps explain how rising prices for goods and services affect people's ability to meet their financial obligations. </li>
+                <li>Economic Growth Data (GDP): Gross Domestic Product (GDP) and other economic growth indicators provide insight into the overall health of the economy. A drop in GDP may be associated with a default, as employment and financial stability would be negatively affected. </li>
+            </ul>
+            <h3 class="subtitulos">Association</h3>
+            <p>
+                Integrating macroeconomic data will allow observed patterns of credit behavior to be crystallized. For example, increases in loan payments may be associated with a recession or rising interest rates, providing valuable insight into the root causes of repayment difficulties. 
+            </p>
+            <h3 class="subtitulos">Potential Impact</h3>
+            <p>The use of these exogenous databases can greatly improve the predictive power of credit risk models because they capture not only the individual characteristics of borrowers, but also the broader economy in which they operate. In this way, financial institutions will improve their levels of risk management.</p>
+        </ol>
+        </section>
+        <section class="sectionSeparation"><h2 class="titulos">Data Visualization</h2>
+        <ol class="contentSeparation">
+            <h3 class="centerText subtitulos">Pie Chart</h3>
+            <p>
+                <div class="image-container">
+                    <img src="../img/pie_chart.png" alt="pie chart">
+                </div>
+                The pie chart shows that the dataset is unbalanced, with 91.9% of clients with no payment difficulties (0) and only 8.1% with difficulties (1). This imbalance can lead to the classification model being biased towards predicting the majority class (0), resulting in poor performance in detecting customers with payment difficulties. To address this, techniques such as oversampling the minority class or undersampling the majority class can be applied, and metrics such as F1-score or ROC AUC can be used for a more accurate assessment of the model.
+            </p>
+        </ol>
+        </section>
         <section class="sectionSeparation">
             <h2 class="titulos">Data Cleaning</h2>
             <p class="subtitleSeparation">Before performing a data analysis, it is essential to ensure that the data is accurate and complete. A process known as 'data cleaning' removes errors or missing values that may bias the results. Below are the results of the data cleaning process performed on our dataset.</p>
